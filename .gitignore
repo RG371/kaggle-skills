@@ -1,0 +1,39 @@
+# Python bytecode and eggs
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data, models, and logs (keep large/binary outputs out of Git)
+data/
+output/
+outputs/
+logs/
+
+# OS / Editor metadata
+.DS_Store
+.idea/
+.vscode/
+
+# Model files (can be large)
+*.joblib
+*.pkl
+*.pickle
+
+# Submission files
+submission.csv
+*.csv
+
+# Environment variables
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.temp
