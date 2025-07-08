@@ -1,4 +1,4 @@
-.PHONY: train submit clean
+.PHONY: train submit clean lint format test
 
 # Train the model
 train:
@@ -23,3 +23,16 @@ install:
 setup:
 	python -m venv .venv
 	.venv/bin/pip install -r requirements.lock
+
+# Lint code with ruff
+lint:
+	ruff .
+
+# Format code with black
+format:
+	black .
+
+# Run tests with pytest
+test:
+	pytest -q
+ 

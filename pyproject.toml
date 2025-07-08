@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "kaggle-skills"
+version = "0.1.0"
+description = "A lightweight scaffold for experimenting, training, and submitting models to Kaggle competitions."
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+joblib = "1.5.1"
+lightgbm = "4.6.0"
+numpy = "2.3.1"
+pandas = "2.3.0"
+python-dateutil = "2.9.0.post0"
+pytz = "2025.2"
+scikit-learn = "1.7.0"
+scipy = "1.16.0"
+six = "1.17.0"
+threadpoolctl = "3.6.0"
+tzdata = "2025.2"
+pyyaml = "^6.0.2"
+torch = "^2.7.1"
+pytest = "^8.4.1"
+pre-commit = "^4.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api" 
