@@ -1,7 +1,35 @@
+# Global configuration
 seed: 42
-data:
-  train_path: data/train.csv
-  test_path: data/test.csv
+
+# Model configuration
 model:
-  n_estimators: 100
-  max_depth: 5 
+  name: "random_forest"
+  random_state: 42
+  test_size: 0.2
+  
+# Data paths
+data:
+  train_path: "data/train.csv"
+  test_path: "data/test.csv"
+  output_path: "outputs/"
+  
+# Hyperparameters
+hyperparameters:
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    min_samples_split: 2
+    min_samples_leaf: 1
+  
+  lightgbm:
+    num_leaves: 31
+    learning_rate: 0.05
+    n_estimators: 100
+    random_state: 42
+    
+# Feature engineering
+features:
+  use_title: true
+  use_family_size: true
+  use_age_groups: true
+  use_cabin_deck: true 

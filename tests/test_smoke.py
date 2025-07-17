@@ -1,7 +1,27 @@
 import importlib
+import subprocess
+import sys
 
 # Import train.py as a module
 train = importlib.import_module("src.train")
+
+
+def test_imports():
+    """
+    Smoke test: Check that key libraries can be imported.
+    """
+    import pandas
+    import numpy
+    import sklearn
+    import torch
+    import lightgbm
+    import joblib
+    import yaml
+    import matplotlib
+    import seaborn
+    import plotly
+    import mlflow
+    import kaggle
 
 
 def test_seed_reproducibility():
@@ -19,3 +39,19 @@ def test_seed_reproducibility():
     seed_everything(config["seed"])
     arr2 = np.random.rand(5)
     assert (arr1 == arr2).all(), "Random seed is not reproducible!"
+
+
+def test_train_script_runs():
+    """
+    Smoke test: Ensure train.py runs without crashing.
+    """
+    result = subprocess.run([sys.executable, "src/train.py"], capture_output=True)
+    assert result.returncode == 0, f"train.py failed: {result.stderr.decode()}"
+
+
+def test_submit_script_runs():
+    """
+    Smoke test: Ensure submit.py runs without crashing.
+    """
+    result = subprocess.run([sys.executable, "src/submit.py"], capture_output=True)
+    assert result.returncode == 0, f"submit.py failed: {result.stderr.decode()}"

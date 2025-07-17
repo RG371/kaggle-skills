@@ -4,12 +4,13 @@ version = "0.1.0"
 description = "A lightweight scaffold for experimenting, training, and submitting models to Kaggle competitions."
 authors = ["Your Name <your.email@example.com>"]
 license = "MIT"
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.13"
 joblib = "1.5.1"
 lightgbm = "4.6.0"
-numpy = "2.3.1"
+numpy = ">=1.26.0,<2.2.0"
 pandas = "2.3.0"
 python-dateutil = "2.9.0.post0"
 pytz = "2025.2"
@@ -22,6 +23,14 @@ pyyaml = "^6.0.2"
 torch = "^2.7.1"
 pytest = "^8.4.1"
 pre-commit = "^4.2.0"
+kaggle = "^1.7.4.5"
+jupyter = "^1.1.1"
+ipykernel = "^6.29.5"
+matplotlib = "^3.10.3"
+seaborn = "^0.13.2"
+plotly = "^6.2.0"
+mlflow = "^3.1.1"
+tensorflow = "^2.19.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
